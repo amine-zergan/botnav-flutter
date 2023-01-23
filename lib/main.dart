@@ -97,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage>
 
     controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 35),
+      duration: const Duration(milliseconds: 350),
     );
     animation = Tween<double>(begin: 0.0, end: 20.0)
         .animate(CurvedAnimation(parent: controller, curve: Curves.elasticOut))
@@ -399,9 +399,9 @@ Path getClipClip(Size size, bool select, Offset offset, double x) {
   path.quadraticBezierTo(size.width, height, size.width - 30, height);
   path.lineTo(size.width - 25, height);
   if (select == true) {
-    path.lineTo(-offset.dx + 53, height);
+    path.lineTo(-offset.dx + 50, height);
 
-    path.quadraticBezierTo(-offset.dx + 15, x, -offset.dx - 28, height);
+    path.quadraticBezierTo(-offset.dx + 15, x, -offset.dx - 25, height);
   }
   path.lineTo(20, height);
   path.quadraticBezierTo(0, height, 0, size.height);
