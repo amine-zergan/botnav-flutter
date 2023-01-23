@@ -2,6 +2,8 @@
 import 'dart:async';
 
 import 'package:after_layout/after_layout.dart';
+import 'package:botnav/pages/page_one.dart';
+import 'package:botnav/pages/page_two.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -114,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage>
       ..addListener(() {
         setState(() {});
       });
-    positionanimation = Tween<double>(begin: 0.0, end: -120.0)
+    positionanimation = Tween<double>(begin: 0.0, end: -110.0)
         .animate(CurvedAnimation(parent: controller, curve: Curves.elasticOut))
       ..addListener(() {
         setState(() {});
@@ -307,21 +309,15 @@ class _MyHomePageState extends State<MyHomePage>
               ),
             );
           }),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Bottom navigation Animated Package',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline5!
-                    .copyWith(fontWeight: FontWeight.w500),
-                textAlign: TextAlign.center,
-              ),
-            ),
+      body: SafeArea(
+        child: IndexedStack(
+          index: selected,
+          children: const [
+            PageOne(),
+            PageTwo(),
+            PageOne(),
+            PageTwo(),
+            PageOne(),
           ],
         ),
       ),
