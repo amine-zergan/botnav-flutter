@@ -1,0 +1,23 @@
+{
+  "settings": {
+    "files.exclude": {}
+  },
+  "files.exclude": {
+    "android": true,
+    "ios": true,
+    "linux": true,
+    "macos": true,
+    "test": true,
+    "web": true,
+    "windows": true,
+    ".gitignore": true,
+    ".metadata": true,
+    "analysis_options.yaml": true,
+    "botnav.iml": true,
+    "pubspec.lock": true,
+    "README.md": true,
+    ".vscode": true,
+    ".idea": true,
+    ".dart_tool": true
+  }
+}
